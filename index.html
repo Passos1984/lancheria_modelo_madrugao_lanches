@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <img src="img/logo.png" alt="Logo Madrugadão Lanches" class="logo-header">
+    <link rel="stylesheet" href="style.css">
+    <title>Madrugadão Lanches</title>
+</head>
+
+<body>
+    <header>
+        <h1>Madrugadão Lanches</h1>
+        <p>O melhor Xis, Porções e Pastéis da região direto no seu WhatsApp!</p>
+    </header>
+
+    <main class="container-produtos">
+
+        <div class="card-produto">
+            <img src="img/coxinha.png" alt="Coxinha de Frango">
+            <div class="info-produto">
+                <h2>Coxinha de Frango</h2>
+                <p>Massa crocante com bastante recheio de frango desfiado!</p>
+                <span class="preco">R$ 8,00</span>
+            </div>
+            <button class="btn-adicionar" onclick="adicionarDireto('Coxinha de Frango', 8)">+ Pedir Salgado</button>
+        </div>
+
+        <div class="card-produto">
+            <img src="img/torrada_simples.png" alt="Torrada Completa">
+            <div class="info-produto">
+                <h2>Torrada Completa</h2>
+                <p>Presunto, queijo, ovo, tomate e alface na chapa!</p>
+                <span class="preco">R$ 15,00</span>
+            </div>
+            <button class="btn-adicionar" onclick="adicionarDireto('Torrada Completa', 15)">+ Pedir Torrada</button>
+        </div>
+
+        <div class="card-produto">
+            <img src="img/Batata_frita.jpg" alt="Porção de Fritas">
+            <div class="info-produto">
+                <h2>Porção Personalizada</h2>
+                <p>Escolha o tamanho e adicione bacon, cheddar e muito mais!</p>
+                <span class="preco">A partir de R$ 20,00</span>
+            </div>
+            <button class="btn-adicionar" onclick="adicionarAoCarrinho('Porção Personalizada', 0)">+ Montar
+                Porção</button>
+        </div>
+
+        <div class="card-produto">
+            <img src="img/barca_calabresa.png" alt="Barca de Lanches">
+            <div class="info-produto">
+                <h2>Barca de Fritas e Calabresa</h2>
+                <p>A maior e mais completa! Perfeita para compartilhar com a galera.</p>
+                <span class="preco">R$ 55,00</span>
+            </div>
+            <button class="btn-adicionar" onclick="adicionarDireto('Barca Especial Fritas e Calabresa', 55)">+ Pedir
+                Barca</button>
+        </div>
+
+        <!-- ======================= -->
+        <!-- SEÇÃO DE XIS            -->
+        <!-- ======================= -->
+        <div class="card-produto">
+            <img src="img/xis_salada.png" alt="Xis Salada">
+            <div class="info-produto">
+                <h2>Xis Salada</h2>
+                <p>Pão, hambúrguer, queijo, presunto, ovo, milho, ervilha e salada.</p>
+                <span class="preco">R$ 25,00</span>
+            </div>
+            <button class="btn-adicionar" onclick="abrirModalLanche('Xis Salada', 25.00, 'xis')">+ Personalizar e
+                Pedir</button>
+        </div>
+
+        <div class="card-produto">
+            <img src="img/xis_bacon.png" alt="Xis Bacon"> <!-- Coloque a imagem correta na sua pasta -->
+            <div class="info-produto">
+                <h2>Xis Bacon</h2>
+                <p>Muito bacon, hambúrguer, queijo, presunto, ovo, milho, ervilha e salada.</p>
+                <span class="preco">R$ 28,00</span>
+            </div>
+            <button class="btn-adicionar" onclick="abrirModalLanche('Xis Bacon', 28.00, 'xis')">+ Personalizar e
+                Pedir</button>
+        </div>
+
+        <div class="card-produto">
+            <img src="img/xix_frango.png" alt="Xis Frango">
+            <div class="info-produto">
+                <h2>Xis Frango</h2>
+                <p>Frango desfiado, queijo, presunto, ovo, milho, ervilha e salada.</p>
+                <span class="preco">R$ 26,00</span>
+            </div>
+            <button class="btn-adicionar" onclick="abrirModalLanche('Xis Frango', 26.00, 'xis')">+ Personalizar e
+                Pedir</button>
+        </div>
+
+        <div class="card-produto">
+            <img src="img/xis_coracao.png" alt="Xis Coração">
+            <div class="info-produto">
+                <h2>Xis Coração</h2>
+                <p>Coraçãozinho na chapa, queijo, presunto, ovo, milho, ervilha e salada.</p>
+                <span class="preco">R$ 30,00</span>
+            </div>
+            <button class="btn-adicionar" onclick="abrirModalLanche('Xis Coração', 30.00, 'xis')">+ Personalizar e
+                Pedir</button>
+        </div>
+
+        <div class="card-produto">
+            <img src="img/xis_calabresa.png " alt="Xis Calabresa">
+            <div class="info-produto">
+                <h2>Xis Calabresa</h2>
+                <p>Calabresa fatiada, hambúrguer, queijo, presunto, ovo, milho, ervilha e salada.</p>
+                <span class="preco">R$ 27,00</span>
+            </div>
+            <button class="btn-adicionar" onclick="abrirModalLanche('Xis Calabresa', 27.00, 'xis')">+ Personalizar e
+                Pedir</button>
+        </div>
+
+        <div class="card-produto">
+            <img src="img/xis_estrogonofe.png" alt="Xis Estrogonofe">
+            <div class="info-produto">
+                <h2>Xis Estrogonofe</h2>
+                <p>Estrogonofe de carne, batata palha, queijo, presunto, ovo, milho e ervilha.</p>
+                <span class="preco">R$ 32,00</span>
+            </div>
+            <button class="btn-adicionar" onclick="abrirModalLanche('Xis Estrogonofe', 32.00, 'xis')">+ Personalizar e
+                Pedir</button>
+        </div>
+
+        <div class="card-produto">
+            <img src="img/xis_tudo.png" alt="Xis Tudo">
+            <div class="info-produto">
+                <h2>Xis Tudo</h2>
+                <p>Hambúrguer, bacon, coração, frango, calabresa, queijo, presunto, ovo e salada!</p>
+                <span class="preco">R$ 38,00</span>
+            </div>
+            <button class="btn-adicionar" onclick="abrirModalLanche('Xis Tudo', 38.00, 'xis')">+ Personalizar e
+                Pedir</button>
+        </div>
+
+        <!-- ======================= -->
+        <!-- PASTÉIS, CACHORRO E BEBIDAS -->
+        <!-- ======================= -->
+        <div class="card-produto">
+            <img src="img/pastel_salgado.png" alt="Pastel">
+            <div class="info-produto">
+                <h2>Pastéis Fritos na Hora</h2>
+                <p>Diversos sabores de pastel super recheado e crocante!</p>
+                <span class="preco">A partir de R$ 10,00</span>
+            </div>
+            <button class="btn-adicionar" onclick="abrirModalPastel()">+ Escolher Sabor</button>
+        </div>
+
+        <div class="card-produto">
+            <img src="img/cachorro_quente.png" alt="Cachorro Quente">
+            <div class="info-produto">
+                <h2>Cachorro-Quente</h2>
+                <p>Cachorro-quente caprichado com molho especial e batata palha!</p>
+                <span class="preco">A partir de R$ 8,00</span>
+            </div>
+            <button class="btn-adicionar" onclick="abrirModalCachorro()">+ Escolher Opção</button>
+        </div>
+
+        <div class="card-produto">
+            <img src="img/suco_natural.jpg" alt="Bebidas">
+            <div class="info-produto">
+                <h2>Bebidas Geladas</h2>
+                <p>Sucos, Águas, Refrigerante lata e 2 Litros!</p>
+                <span class="preco">A partir de R$ 3,50</span>
+            </div>
+            <button class="btn-adicionar" onclick="abrirModalBebidas()">+ Escolher Bebida</button>
+        </div>
+
+        <div class="card-produto">
+            <img src="img/combo_galera.png" alt="Combo Família">
+            <div class="info-produto">
+                <h2>Combo Galera</h2>
+                <p>2 Xis Completos + 2 Cachorros-Quentes. Ideal para matar a fome!</p>
+                <span class="preco">R$ 75,00</span>
+            </div>
+            <button class="btn-adicionar" onclick="abrirModalCombo()">+ Pedir Combo</button>
+        </div>
+
+    </main>
+
+    <!-- ===================================== -->
+    <!-- MODAIS DE PERSONALIZAÇÃO              -->
+    <!-- ===================================== -->
+
+    <!-- Modal Porção (Fritas) -->
+    <div id="modal-complementos" class="modal oculta">
+        <div class="modal-conteudo">
+            <span class="fechar-modal" onclick="fecharModal()">X</span>
+            <h2 id="modal-titulo">Montando sua Porção</h2>
+            <p id="modal-preco-base" style="color: #cc0000; font-weight: bold;">R$ 0,00</p>
+
+            <div class="secao-tamanho">
+                <h3>Escolha o Tamanho da Frita</h3>
+                <div class="opcoes-tamanho">
+                    <label class="card-tamanho">
+                        <input type="radio" name="tamanho" value="Pequena" data-preco="20" data-max="2">
+                        <div class="tamanho-info">
+                            <span class="tamanho-nome">Pequena</span>
+                            <span class="tamanho-preco">R$ 20,00</span>
+                            <span class="tamanho-limite">+ 2 molhos grátis</span>
+                        </div>
+                    </label>
+                    <label class="card-tamanho">
+                        <input type="radio" name="tamanho" value="Média" data-preco="30" data-max="3">
+                        <div class="tamanho-info">
+                            <span class="tamanho-nome">Média</span>
+                            <span class="tamanho-preco">R$ 30,00</span>
+                            <span class="tamanho-limite">+ 3 molhos grátis</span>
+                        </div>
+                    </label>
+                    <label class="card-tamanho">
+                        <input type="radio" name="tamanho" value="Grande" data-preco="40" data-max="4">
+                        <div class="tamanho-info">
+                            <span class="tamanho-nome">Grande</span>
+                            <span class="tamanho-preco">R$ 40,00</span>
+                            <span class="tamanho-limite">+ 4 molhos grátis</span>
+                        </div>
+                    </label>
+                    <label class="card-tamanho">
+                        <input type="radio" name="tamanho" value="Barca de Fritas" data-preco="55" data-max="5">
+                        <div class="tamanho-info">
+                            <span class="tamanho-nome">Barca</span>
+                            <span class="tamanho-preco">R$ 55,00</span>
+                            <span class="tamanho-limite">+ 5 molhos grátis</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="secao-adicionais">
+                <h3>Molhos Grátis</h3>
+                <label><input type="checkbox" class="add-gratis" value="Maionese Temperada"> Maionese da
+                    Casa</label><br>
+                <label><input type="checkbox" class="add-gratis" value="Ketchup"> Ketchup</label><br>
+                <label><input type="checkbox" class="add-gratis" value="Mostarda"> Mostarda</label><br>
+                <label><input type="checkbox" class="add-gratis" value="Molho de Alho"> Molho de Alho</label><br>
+                <label><input type="checkbox" class="add-gratis" value="Queijo Ralado"> Queijo Ralado</label><br>
+                <label><input type="checkbox" class="add-gratis" value="Orégano"> Orégano</label>
+            </div>
+
+            <div class="secao-adicionais">
+                <h3>Carnes e Adicionais Pagos</h3>
+                <label><input type="checkbox" class="add-pago" value="Bacon" data-preco="8.00"> Bacon Extra (+ R$
+                    8,00)</label><br>
+                <label><input type="checkbox" class="add-pago" value="Cheddar Cremoso" data-preco="7.00"> Cheddar
+                    Cremoso (+ R$ 7,00)</label><br>
+                <label><input type="checkbox" class="add-pago" value="Calabresa Acebolada" data-preco="8.00"> Calabresa
+                    Acebolada (+ R$ 8,00)</label><br>
+                <label><input type="checkbox" class="add-pago" value="Coraçãozinho" data-preco="12.00"> Coraçãozinho (+
+                    R$ 12,00)</label><br>
+                <label><input type="checkbox" class="add-pago" value="Ovo Frito" data-preco="3.00"> Ovo Frito (+ R$
+                    3,00)</label><br>
+                <label><input type="checkbox" class="add-pago" value="Catupiry Original" data-preco="6.00"> Catupiry
+                    Original (+ R$ 6,00)</label>
+            </div>
+
+            <button class="btn-confirmar-modal" onclick="confirmarAcai()">Confirmar Adicionais</button>
+        </div>
+    </div>
+
+    <!-- Modal para Personalizar XIS -->
+    <div id="modal-xis" class="modal oculta">
+        <div class="modal-conteudo">
+            <span class="fechar-modal" onclick="fecharModalXis()">X</span>
+            <h2 id="titulo-modal-xis">Personalizar Xis</h2>
+            <p id="preco-modal-xis" style="color: #cc0000; font-weight: bold; margin-bottom: 15px;">R$ 0,00</p>
+
+            <div class="secao-adicionais">
+                <h3>O que você NÃO quer? (Marque para tirar)</h3>
+                <label><input type="checkbox" class="tirar-ingrediente" value="Sem Milho"> Sem Milho</label><br>
+                <label><input type="checkbox" class="tirar-ingrediente" value="Sem Ervilha"> Sem Ervilha</label><br>
+                <label><input type="checkbox" class="tirar-ingrediente" value="Sem Tomate"> Sem Tomate</label><br>
+                <label><input type="checkbox" class="tirar-ingrediente" value="Sem Alface"> Sem Alface</label><br>
+                <label><input type="checkbox" class="tirar-ingrediente" value="Sem Ovo"> Sem Ovo</label><br>
+                <label><input type="checkbox" class="tirar-ingrediente" value="Sem Maionese"> Sem Maionese</label>
+            </div>
+
+            <button class="btn-confirmar-modal" onclick="confirmarXis()">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+
+    <!-- Modal de Pastéis -->
+    <div id="modal-pastel" class="modal oculta">
+        <div class="modal-conteudo">
+            <span class="fechar-modal" onclick="fecharModalPastel()">X</span>
+            <h2>Escolha seu Pastel</h2>
+            <div class="lista-pasteis">
+                <!-- Pastéis Salgados -->
+                <label class="card-pastel">
+                    <input type="radio" name="pastel" value="Pastel Carne Ovo" data-preco="10">
+                    <div class="pastel-info"><span class="pastel-nome">Carne Ovo</span><span class="pastel-preco">R$
+                            10,00</span></div>
+                </label>
+                <label class="card-pastel">
+                    <input type="radio" name="pastel" value="Pastel Carne Ovo Azeitona" data-preco="10">
+                    <div class="pastel-info"><span class="pastel-nome">Carne Ovo Azeitona</span><span
+                            class="pastel-preco">R$ 10,00</span></div>
+                </label>
+                <label class="card-pastel">
+                    <input type="radio" name="pastel" value="Pastel Frango" data-preco="10">
+                    <div class="pastel-info"><span class="pastel-nome">Frango</span><span class="pastel-preco">R$
+                            10,00</span></div>
+                </label>
+                <label class="card-pastel">
+                    <input type="radio" name="pastel" value="Pastel Frango Azeitona" data-preco="10">
+                    <div class="pastel-info"><span class="pastel-nome">Frango Azeitona</span><span
+                            class="pastel-preco">R$ 10,00</span></div>
+                </label>
+                <label class="card-pastel">
+                    <input type="radio" name="pastel" value="Pastel Frango com Queijo" data-preco="12">
+                    <div class="pastel-info"><span class="pastel-nome">Frango c/ Queijo</span><span
+                            class="pastel-preco">R$ 12,00</span></div>
+                </label>
+                <label class="card-pastel">
+                    <input type="radio" name="pastel" value="Pastel Napolitano" data-preco="12">
+                    <div class="pastel-info"><span class="pastel-nome">Napolitano</span><span class="pastel-preco">R$
+                            12,00</span></div>
+                </label>
+                <label class="card-pastel">
+                    <input type="radio" name="pastel" value="Pastel Mistão" data-preco="12">
+                    <div class="pastel-info"><span class="pastel-nome">Mistão</span><span class="pastel-preco">R$
+                            12,00</span></div>
+                </label>
+                <!-- Pastéis Doces -->
+                <label class="card-pastel">
+                    <input type="radio" name="pastel" value="Pastel Chocolate" data-preco="12">
+                    <div class="pastel-info"><span class="pastel-nome">Chocolate</span><span class="pastel-preco">R$
+                            12,00</span></div>
+                </label>
+                <label class="card-pastel">
+                    <input type="radio" name="pastel" value="Pastel Doce de Leite com Banana" data-preco="12">
+                    <div class="pastel-info"><span class="pastel-nome">Doce de Leite c/ Banana</span><span
+                            class="pastel-preco">R$ 12,00</span></div>
+                </label>
+            </div>
+
+            <div class="secao-adicionais">
+                <h3>O que você NÃO quer?</h3>
+                <label><input type="checkbox" class="tirar-ingrediente-pastel" value="Sem Azeitona"> Sem
+                    Azeitona</label><br>
+                <label><input type="checkbox" class="tirar-ingrediente-pastel" value="Sem Cebola"> Sem Cebola</label>
+            </div>
+
+            <button class="btn-confirmar-modal" onclick="confirmarPastel()">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+
+    <!-- Modal de Cachorro-Quente -->
+    <div id="modal-cachorro" class="modal oculta">
+        <div class="modal-conteudo">
+            <span class="fechar-modal" onclick="fecharModalCachorro()">X</span>
+            <h2>Montar Cachorro-Quente</h2>
+
+            <div class="lista-pasteis">
+                <label class="card-pastel">
+                    <input type="radio" name="tipo_cachorro" value="Cachorro-Quente Simples (1 Salsicha)"
+                        data-preco="8">
+                    <div class="pastel-info">
+                        <span class="pastel-nome">Simples (1 Salsicha)</span>
+                        <span class="pastel-preco">R$ 8,00</span>
+                    </div>
+                </label>
+                <label class="card-pastel">
+                    <input type="radio" name="tipo_cachorro" value="Cachorro-Quente Duplo (2 Salsichas)"
+                        data-preco="12">
+                    <div class="pastel-info">
+                        <span class="pastel-nome">Duplo (2 Salsichas)</span>
+                        <span class="pastel-preco">R$ 12,00</span>
+                    </div>
+                </label>
+            </div>
+
+            <div class="secao-adicionais">
+                <h3>O que você NÃO quer? (Marque para tirar)</h3>
+                <label><input type="checkbox" class="tirar-ingrediente-cachorro" value="Sem Milho"> Sem
+                    Milho</label><br>
+                <label><input type="checkbox" class="tirar-ingrediente-cachorro" value="Sem Ervilha"> Sem
+                    Ervilha</label><br>
+                <label><input type="checkbox" class="tirar-ingrediente-cachorro" value="Sem Maionese"> Sem
+                    Maionese</label><br>
+                <label><input type="checkbox" class="tirar-ingrediente-cachorro" value="Sem Ketchup"> Sem
+                    Ketchup</label><br>
+                <label><input type="checkbox" class="tirar-ingrediente-cachorro" value="Sem Mostarda"> Sem
+                    Mostarda</label><br>
+                <label><input type="checkbox" class="tirar-ingrediente-cachorro" value="Sem Batata Palha"> Sem Batata
+                    Palha</label>
+            </div>
+
+            <button class="btn-confirmar-modal" onclick="confirmarCachorro()">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+
+    <!-- Modal de Bebidas (Atualizado com Água, Sucos, Lata e 2L) -->
+    <div id="modal-bebidas" class="modal oculta">
+        <div class="modal-conteudo">
+            <span class="fechar-modal" onclick="fecharModalBebidas()">X</span>
+            <h2>Escolha sua Bebida</h2>
+            <div class="lista-pasteis">
+                <!-- Águas -->
+                <label class="card-pastel"><input type="radio" name="bebida" value="Água Mineral Sem Gás"
+                        data-preco="3.50">
+                    <div class="pastel-info"><span class="pastel-nome">Água Sem Gás</span><span class="pastel-preco">R$
+                            3,50</span></div>
+                </label>
+                <label class="card-pastel"><input type="radio" name="bebida" value="Água Mineral Com Gás"
+                        data-preco="4.00">
+                    <div class="pastel-info"><span class="pastel-nome">Água Com Gás</span><span class="pastel-preco">R$
+                            4,00</span></div>
+                </label>
+
+                <!-- Sucos -->
+                <label class="card-pastel"><input type="radio" name="bebida" value="Suco de Laranja" data-preco="8.00">
+                    <div class="pastel-info"><span class="pastel-nome">Suco de Laranja</span><span
+                            class="pastel-preco">R$ 8,00</span></div>
+                </label>
+                <label class="card-pastel"><input type="radio" name="bebida" value="Suco de Uva" data-preco="8.00">
+                    <div class="pastel-info"><span class="pastel-nome">Suco de Uva</span><span class="pastel-preco">R$
+                            8,00</span></div>
+                </label>
+
+                <!-- Refri Lata -->
+                <label class="card-pastel"><input type="radio" name="bebida" value="Coca-Cola Lata" data-preco="6.00">
+                    <div class="pastel-info"><span class="pastel-nome">Coca-Cola Lata</span><span
+                            class="pastel-preco">R$ 6,00</span></div>
+                </label>
+                <label class="card-pastel"><input type="radio" name="bebida" value="Guaraná Lata" data-preco="6.00">
+                    <div class="pastel-info"><span class="pastel-nome">Guaraná Lata</span><span class="pastel-preco">R$
+                            6,00</span></div>
+                </label>
+                <label class="card-pastel"><input type="radio" name="bebida" value="Fruki Lata" data-preco="6.00">
+                    <div class="pastel-info"><span class="pastel-nome">Fruki Lata</span><span class="pastel-preco">R$
+                            6,00</span></div>
+                </label>
+
+                <!-- Refri 2 Litros -->
+                <label class="card-pastel"><input type="radio" name="bebida" value="Coca-Cola 2 Litros"
+                        data-preco="14.00">
+                    <div class="pastel-info"><span class="pastel-nome">Coca-Cola 2 Litros</span><span
+                            class="pastel-preco">R$ 14,00</span></div>
+                </label>
+                <label class="card-pastel"><input type="radio" name="bebida" value="Guaraná 2 Litros"
+                        data-preco="12.00">
+                    <div class="pastel-info"><span class="pastel-nome">Guaraná 2 Litros</span><span
+                            class="pastel-preco">R$ 12,00</span></div>
+                </label>
+                <label class="card-pastel"><input type="radio" name="bebida" value="Fruki 2 Litros" data-preco="10.00">
+                    <div class="pastel-info"><span class="pastel-nome">Fruki 2 Litros</span><span
+                            class="pastel-preco">R$ 10,00</span></div>
+                </label>
+            </div>
+            <button class="btn-confirmar-modal" onclick="confirmarBebida()">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+
+    <!-- MODAL DO COMBO DA GALERA -->
+    <div id="modal-combo" class="modal oculta">
+        <div class="modal-conteudo">
+            <span class="fechar-modal" onclick="fecharModalCombo()">X</span>
+            <h2>Montando Combo Galera</h2>
+            <p style="color: #cc0000; font-weight: bold; margin-bottom: 15px;">R$ 75,00</p>
+
+            <div class="secao-tamanho">
+                <h3>Xis 1 (Salada)</h3>
+                <div class="secao-adicionais">
+                    <label><input type="checkbox" class="combo-copo1 add-gratis" value="Sem Milho"> Sem
+                        Milho</label><br>
+                    <label><input type="checkbox" class="combo-copo1 add-gratis" value="Sem Ervilha"> Sem
+                        Ervilha</label><br>
+                    <label><input type="checkbox" class="combo-copo1 add-pago" value="Bacon" data-preco="5.00"> Bacon (+
+                        R$ 5,00)</label><br>
+                    <label><input type="checkbox" class="combo-copo1 add-pago" value="Ovo Extra" data-preco="3.00"> Ovo
+                        Extra (+ R$ 3,00)</label>
+                </div>
+            </div>
+
+            <div class="secao-tamanho">
+                <h3>Xis 2 (Salada)</h3>
+                <div class="secao-adicionais">
+                    <label><input type="checkbox" class="combo-copo2 add-gratis" value="Sem Milho"> Sem
+                        Milho</label><br>
+                    <label><input type="checkbox" class="combo-copo2 add-gratis" value="Sem Ervilha"> Sem
+                        Ervilha</label><br>
+                    <label><input type="checkbox" class="combo-copo2 add-pago" value="Bacon" data-preco="5.00"> Bacon (+
+                        R$ 5,00)</label><br>
+                    <label><input type="checkbox" class="combo-copo2 add-pago" value="Ovo Extra" data-preco="3.00"> Ovo
+                        Extra (+ R$ 3,00)</label>
+                </div>
+            </div>
+
+            <div class="secao-tamanho">
+                <h3>Cachorro-Quente 1</h3>
+                <div class="secao-adicionais">
+                    <label><input type="checkbox" class="combo-copo3 add-gratis" value="Sem Mostarda"> Sem
+                        Mostarda</label><br>
+                    <label><input type="checkbox" class="combo-copo3 add-gratis" value="Sem Ketchup"> Sem
+                        Ketchup</label><br>
+                    <label><input type="checkbox" class="combo-copo3 add-pago" value="Salsicha Extra" data-preco="3.00">
+                        Salsicha Extra (+ R$ 3,00)</label>
+                </div>
+            </div>
+
+            <div class="secao-tamanho">
+                <h3>Cachorro-Quente 2</h3>
+                <div class="secao-adicionais">
+                    <label><input type="checkbox" class="combo-copo4 add-gratis" value="Sem Mostarda"> Sem
+                        Mostarda</label><br>
+                    <label><input type="checkbox" class="combo-copo4 add-gratis" value="Sem Ketchup"> Sem
+                        Ketchup</label><br>
+                    <label><input type="checkbox" class="combo-copo4 add-pago" value="Salsicha Extra" data-preco="3.00">
+                        Salsicha Extra (+ R$ 3,00)</label>
+                </div>
+            </div>
+
+            <button class="btn-confirmar-modal" onclick="confirmarCombo()">Adicionar Combo ao Carrinho</button>
+        </div>
+    </div>
+
+    <!-- BOTÃO DO CARRINHO FLUTUANTE -->
+    <button id="btn-carrinho" class="carrinho-flutuante" onclick="abrirModalCarrinho()">
+        🛒 Ver Carrinho
+    </button>
+
+    <!-- Modal do Carrinho -->
+    <div id="modal-carrinho" class="modal oculta">
+        <div class="modal-conteudo">
+            <span class="fechar" onclick="fecharModalCarrinho()">&times;</span>
+            <h2>Seu Carrinho</h2>
+            <div id="lista-carrinho"></div>
+            <div class="total-carrinho">
+                <h3>Total: R$ <span id="total-carrinho">0,00</span></h3>
+            </div>
+            <button class="btn-confirmar-modal" onclick="finalizarPedido()">Finalizar Pedido</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
